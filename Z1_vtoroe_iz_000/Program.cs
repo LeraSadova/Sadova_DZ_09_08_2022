@@ -1,2 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
+Console.WriteLine("Введите ТРЕХзначное число из диапазона (100-999)");
+int number=Convert.ToInt32(Console.ReadLine());
+
+void VtoroeChislo(int num) //я так обозвала метод, мне так понятно. 
+{
+    if (num>=100&&num<=999) // проверяю, ввел пользователь трехзначное число или нет?
+    {
+        int dve = num %100; //остаток от деления на 100 
+        int iskomoe=dve/10;// целое от деление на 10 
+    Console.WriteLine($"Вторая цифра введенного числа {num} --> {iskomoe}");    
+    }
+
+    else Console.WriteLine("Вы ввели значение не из диапазон (100-999), перезапустите программу");
+}
+
+VtoroeChislo(number);
